@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>GitHub Repositories Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #repositories {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .repository {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        #pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination-button {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="w-100">
+    <h1>GitHub Repositories Viewer</h1>
+    
+    <!-- Search Bar Section -->
+    <form class="w-100 p-md-5  mx-auto d-flex flex-column gap-3" id="usernameForm" onsubmit="redirectToUserPage(); return false;">
+        <input class="w-100 p-2 fw-normal fs-4" type="text" id="username" required placeholder="Enter GitHub User Name">
+        <button class=" w-100 p-1 fw-bold fs-5 btn btn-success" type="submit">Search Repositories</button>
+    </form>
+
+   </div>
+    <script>
+        function redirectToUserPage() {
+            const username = document.getElementById('username').value;
+            window.location.href = `/user.html?username=${username}`;
+        }
+    </script>
+</body>
+</html>

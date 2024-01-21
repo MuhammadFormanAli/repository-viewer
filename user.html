@@ -1,0 +1,44 @@
+<!-- user.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Information and Repositories</title>
+    <link rel="stylesheet" href="user.css">
+    
+    
+  </head>
+  <body>
+    <h1>User Information and Repositories</h1>
+
+    <!-- Add a loading element -->
+<div id="loader" class="loader"></div>
+
+    <!-- User Information Section -->
+
+    <div">
+        <div id="user-info">
+            <img id="user-avatar" src="" alt="User Avatar" />
+            <div>
+              <p id="name"></p>
+              <p id="user-bio"></p>
+              <div style="display: flex; align-items: center;">
+                <img id="location-img" src="public/location.png" alt="">
+                <p id="location"></p>
+              </div>
+              
+            </div>
+          </div>
+          <p id="github-link"></p>
+          
+          
+    </div>
+
+    <!-- Repositories List and Pagination Section -->
+    <div id="repositories"></div>
+    <div id="pagination"></div>
+    <script src="user.js"></script>
+  </body>
+</html>
